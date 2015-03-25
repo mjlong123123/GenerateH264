@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GenerateH264</string>
+    <string name="button_start">Start</string>
+    <string name="button_stop">Stop</string>
+    
+
+</resources>
