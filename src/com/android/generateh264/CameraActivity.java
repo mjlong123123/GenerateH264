@@ -92,7 +92,7 @@ public class CameraActivity extends BaseActivity implements Callback {
 				mCustomMediaRecorder = new CustomMediaRecorder("");
 				mCustomMediaRecorder
 						.startRecorder(mCamera, mSurfaceView, new VideoInfor(
-								6000, 20, mPreviewWidth, mPreviewHeight));
+								6000, 30, mPreviewWidth, mPreviewHeight));
 			}
 		});
 		mStart.setClickable(true);
@@ -163,14 +163,17 @@ public class CameraActivity extends BaseActivity implements Callback {
 		}
 		mCamera = Camera.open();
 
-		// List<Size> list = mCamera.getParameters().getSupportedVideoSizes();
-		// Size s;
-		// for (int i = 0; i < list.size(); i++) {
-		// s = list.get(i);
-		// Log.e(TAG, "w:" + s.width);
-		// Log.e(TAG, "h:" + s.height);
-		// }
-
+//		 List<Size> list = mCamera.getParameters().getSupportedVideoSizes();
+//		 Size s;
+//		 for (int i = 0; i < list.size(); i++) {
+//		 s = list.get(i);
+//		 Log.e(TAG, "w:" + s.width);
+//		 Log.e(TAG, "h:" + s.height);
+//
+//			mPreviewWidth = s.width;
+//			mPreviewHeight = s.height;
+//		 }
+//
 		mPreviewWidth = 320;
 		mPreviewHeight = 240;
 
