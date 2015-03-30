@@ -22,6 +22,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.generateh264.CustomMediaRecorder.VideoInfor;
+import com.example.remotecamera.R;
 
 public class CameraActivity extends BaseActivity implements Callback {
 	private final static String TAG = "CameraActivity";
