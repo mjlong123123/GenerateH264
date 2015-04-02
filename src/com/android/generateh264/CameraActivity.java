@@ -1,5 +1,6 @@
 package com.android.generateh264;
 
+import java.io.File;
 import java.io.IOException;
 
 import net.youmi.android.banner.AdSize;
@@ -9,6 +10,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.hardware.Camera;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
 import android.util.Log;
@@ -20,6 +22,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.generateh264.CustomMediaRecorder.VideoInfor;
 import com.example.remotecamera.R;
@@ -113,6 +116,10 @@ public class CameraActivity extends BaseActivity implements Callback {
 					mCustomMediaRecorder.stopRecorder();
 					mCustomMediaRecorder = null;
 				}
+				
+				 File file = new File(
+							Environment.getExternalStorageDirectory(), "outputfile.h264");
+				 Toast.makeText(CameraActivity.this, "Save to "+file.getAbsolutePath(), Toast.LENGTH_LONG).show();
 			}
 		});
 		mStop.setClickable(false);
